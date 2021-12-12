@@ -4,7 +4,6 @@ import _ from "lodash";
 
 const create = (req, res, next) => {
   const bugs = new Bug(req.body);
-  console.log(req.body);
   bugs.save((err, result) => {
     if (err) {
       return res.status(400).json({
@@ -49,7 +48,6 @@ const update = (req, res, next) => {
       return res.status(400).json({ error: errorHandler.getErrorMessage(err) });
     }
     res.json(bugs);
-    console.log(bugs)
   });
 };
 

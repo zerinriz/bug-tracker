@@ -33,7 +33,6 @@ const read = (params, token) => {
 };
 
 const update = (params, token, bugs) => {
-  console.log(bugs);
   return fetch(`${baseUrl}/api/bugs/${params.id}`, {
     method: "PUT",
     headers: {

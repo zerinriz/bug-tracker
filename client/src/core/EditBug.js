@@ -47,12 +47,9 @@ function EditBug({ secondOpen, setSecondOpen, values, setValues, id }) {
       },
       bugs
     ).then((data) => {
-      console.log(data);
       if (data && data.error) {
         setValues({ ...values, error: data.error });
-        console.log(values);
       } else {
-        console.log(data);
         setValues({ ...values, redirectToProfile: true });
       }
     });
